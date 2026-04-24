@@ -50,7 +50,9 @@ neonrp tui
 
 ## 行動規範
 
-節度を保ち、善意を前提に。アイデアを批判し、人を批判しない。正式な CoC は v0.2 前に策定します。
+節度を保ち、善意を前提に。アイデアを批判し、人を批判しない。完全な方針は
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) を参照し、非公開の脆弱性報告は
+[SECURITY.md](SECURITY.md) に従ってください。
 
 ## License Asymmetry（ライセンスの非対称性）
 

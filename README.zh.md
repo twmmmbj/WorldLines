@@ -195,6 +195,8 @@ neonrp tui
 
 - [templates/stoneford-worldlines/](templates/stoneford-worldlines) — 示例世界与 Agents（submodule）
 - [CONTRIBUTING.md](CONTRIBUTING.md) — 如何贡献
+- [SECURITY.md](SECURITY.md) — 如何报告安全问题
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — 社区行为预期
 - [LICENSE](LICENSE) — 闭源预览条款
 
 ## 社区与联系方式

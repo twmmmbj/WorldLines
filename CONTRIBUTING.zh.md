@@ -50,7 +50,9 @@ neonrp tui
 
 ## 行为准则
 
-请保持得体。预设善意。批评观点，而非批评人。正式的 CoC 文档会在 v0.2 前落地。
+请保持得体。预设善意。批评观点，而非批评人。完整规范见
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)；如需私下报告安全问题，请遵循
+[SECURITY.md](SECURITY.md)。
 
 ## License Asymmetry（许可非对称性）
 

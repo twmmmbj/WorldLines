@@ -50,7 +50,9 @@ neonrp tui
 
 ## 행동 강령
 
-품위를 지키고, 선의를 가정하고, 사람이 아닌 아이디어를 비판하세요. 정식 CoC 문서는 v0.2 전에 도입됩니다.
+품위를 지키고, 선의를 가정하고, 사람이 아닌 아이디어를 비판하세요. 전체 정책은
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) 를 참고하고, 비공개 보안 제보는
+[SECURITY.md](SECURITY.md) 절차를 따라 주세요.
 
 ## License Asymmetry (라이선스 비대칭성)
 

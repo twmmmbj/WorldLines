@@ -58,8 +58,9 @@ neonrp tui
 
 ## Code of conduct
 
-Be decent. Assume good faith. Criticize ideas, not people. A formal CoC
-document will be adopted before v0.2.
+Be decent. Assume good faith. Criticize ideas, not people. See
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for the full policy, and use
+[SECURITY.md](SECURITY.md) for non-public vulnerability reports.
 
 ## License Asymmetry
 

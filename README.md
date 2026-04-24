@@ -203,6 +203,8 @@ Full docs are on the website — this repo keeps only the entry points.
 
 - [templates/stoneford-worldlines/](templates/stoneford-worldlines) — Sample world & Agents (submodule)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
+- [SECURITY.md](SECURITY.md) — How to report vulnerabilities
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Community expectations
 - [LICENSE](LICENSE) — Proprietary preview terms
 
 ## Community & Contact

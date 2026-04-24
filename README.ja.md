@@ -209,6 +209,8 @@ neonrp tui
 
 - [templates/stoneford-worldlines/](templates/stoneford-worldlines) — サンプルワールドと Agents（submodule）
 - [CONTRIBUTING.ja.md](CONTRIBUTING.ja.md) — コントリビュート方法
+- [SECURITY.md](SECURITY.md) — 脆弱性報告の方法
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — コミュニティの期待値
 - [LICENSE](LICENSE) — プロプライエタリプレビュー条件
 
 ## コミュニティと連絡先

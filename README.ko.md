@@ -208,6 +208,8 @@ agentic 턴입니다.
 
 - [templates/stoneford-worldlines/](templates/stoneford-worldlines) — 샘플 월드 및 Agents（submodule）
 - [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md) — 기여 방법
+- [SECURITY.md](SECURITY.md) — 보안 취약점 신고 방법
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — 커뮤니티 기대 사항
 - [LICENSE](LICENSE) — 독점 프리뷰 조건
 
 ## 커뮤니티 및 연락처
