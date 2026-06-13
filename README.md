@@ -33,7 +33,7 @@ It is an agentic simulation engine. A world-agent connects to place-agents; each
 
 ## Team & Vision
 
-We are **Ludic Dynamics** — a cross-disciplinary team of PhDs and researchers from the **University of Tokyo** and **Nagoya University**, together with game industry practitioners. Our backgrounds span sociology, economics, computer graphics, AI agents, and virtual worlds.
+We are **Ludic Dynamics** — a cross-disciplinary team of PhDs and researchers from the **University of Tokyo**, together with game industry practitioners. Our backgrounds span sociology, economics, computer graphics, AI agents, and virtual worlds.
 
 We grew up on TRPGs, galgames, and otome games. Long before AI became what it is today, we spent years volunteering in Japanese cultural translation, working deep in the tabletop and game-graphics-engine industry, and helping Japanese visual novels launch on Steam. When the pandemic hit, we fell into AI role-play and narrative games — every weekend, every late night, running sessions, building worlds, chasing the feeling of a story that *really breathes*.
 
@@ -85,7 +85,7 @@ irm https://worldlines.gg/install.ps1 | iex
 Then:
 
 ```bash
-./worldlines
+worldlines
 ```
 
 This launches the TUI. From there you can start a new world, browse the catalog, or jump into a saved session.
@@ -109,9 +109,22 @@ No install. Go to **[hub.worldlines.gg](https://hub.worldlines.gg)**, sign in, a
 
 ## Example Worlds
 
-### ⛩ Stoneford — Starter World
+WorldLines runs a world in one of **three engine modes** — and they are *not* interchangeable:
 
-A grey-fog northern river port. Classic-fantasy TRPG · d20 dice · 10-agent orchestrator. The flagship example: a full town with NPCs, quests, a dungeon, and siege mechanics. **[Play online →](https://hub.worldlines.gg/play/worlds/stoneford)** · **[Source & docs →](./examples/stoneford)**
+- **fast** — one quick agent, single voice.
+- **orch** — a world-agent orchestrating domain agents (town / dungeon / combat / story); NPCs are data.
+- **multi-agent** — a world-agent wrapping **independent souls**, each a character-agent with its own mind, memory, and agenda. The tell-tale sign is a `souls/` folder. *This is the new release.*
+
+### 👥 multi-agent — independent souls in one world
+
+| World | Souls | Live Demo |
+|---|---|---|
+| **[Kagura Island](./examples/kagura-island)** | **7** — Kagami · Hane · Makoto · Miyaji · Shiro · Tsubasa · Yuto. Japanese-folk mystery, time loop, CoC checks. The richest multi-agent society. | [Play →](https://hub.worldlines.gg/play/worlds/kagura-island) |
+| **[Stoneford · Elena](./examples/stoneford-elena)** | **2** — Elena (the healer who remembers) + Rowan. The Stoneford world, now inhabited by living souls. | [Play →](https://hub.worldlines.gg/play/worlds/stoneford-elena) |
+
+### ⛩ Stoneford — Flagship orch world
+
+A grey-fog northern river port. Classic-fantasy TRPG · d20 dice · **10-agent orchestrated village** — a world-agent at the centre routing to town, dungeon, combat, story, and NPC agents. **[Play online →](https://hub.worldlines.gg/play/worlds/stoneford)** · **[Source & docs →](./examples/stoneford)**
 
 ### More worlds
 
@@ -123,6 +136,36 @@ A grey-fog northern river port. Classic-fantasy TRPG · d20 dice · 10-agent orc
 | **Sakura Hallway** | Clannad-style school-life · emotional narrative | [Source →](./examples/sakura-hallway) |
 
 All worlds live in [examples/](./examples/) — open-source (AGPL-3.0), fork and ship your own.
+
+### Quick run
+
+```bash
+# multi-agent (souls/ engages the soul wrapper)
+neonrp tui --from examples/kagura-island       # 7 souls — Japanese-folk mystery
+neonrp tui --from examples/stoneford-elena     # 2 souls — Elena & Rowan
+
+# orch
+neonrp tui --from examples/stoneford           # flagship siege TRPG
+neonrp tui --from examples/dark-train          # open world
+neonrp tui --from examples/goblin-ambush/zh    # 3-layer dungeon
+neonrp tui --from examples/sakura-hallway/zh   # school-life narrative
+```
+
+Or play online: [Kagura Island](https://hub.worldlines.gg/play/worlds/kagura-island) · [Stoneford · Elena](https://hub.worldlines.gg/play/worlds/stoneford-elena) · [Stoneford](https://hub.worldlines.gg/play/worlds/stoneford) · [Dark Train](https://hub.worldlines.gg/play/worlds/dark-train)
+
+### Claude Code / MCP
+
+Open Claude Code inside any world directory and the agents are there:
+
+```
+cd examples/dark-train
+claude
+@world-agent 开始游戏
+```
+
+WorldLines exposes its agents as MCP tools. Claude Code discovers them
+automatically — no extra setup. Each example ships with `.claude/agents/`
+pre-configured.
 
 ---
 
@@ -236,8 +279,12 @@ Full roadmap: [docs.worldlines.gg/docs/roadmap](https://docs.worldlines.gg/docs/
 ## Star History
 
 <p align="center">
-  <a href="https://star-history.com/#LudicDynamics/WorldLines&Date">
-    <img src="https://api.star-history.com/svg?repos=LudicDynamics/WorldLines&type=Date" alt="Star History Chart" width="640" />
+  <a href="https://www.star-history.com/?type=date&repos=LudicDynamics%2FWorldLines">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&theme=dark&legend=top-left" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left" />
+    </picture>
   </a>
 </p>
 
@@ -253,4 +300,3 @@ Full roadmap: [docs.worldlines.gg/docs/roadmap](https://docs.worldlines.gg/docs/
 ---
 
 Developed by **nikoloside** & **redoctober**, advanced by [Ludic Dynamics](https://ludicdynamics.com).
-
