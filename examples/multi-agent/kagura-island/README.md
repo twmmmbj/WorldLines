@@ -1,47 +1,61 @@
-# ⛩ Kagura Island 神楽島 — Multi-Agent World
+# 神楽島 — Kagura Island
 
-**Language:** [English](./README.md) · [简体中文](./README.zh.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
+> 和风悬疑、时间循环、Yith 神话、owner-directed soul runtime。
 
-> Engine mode: **multi-agent**. Japanese-folk mystery · time loop · Yith mythos. **Seven living souls** on one island — WorldLines' richest multi-agent society. CoC-style checks (not d20 combat).
+`kagura-island` 是 NeonRP 当前最完整的 soul-native 模板之一。它保留
+`orchestrator` 路由器外壳，但只要根目录存在 `playthrough.json + souls/`，
+运行时就会进入 M18 的 `world-agent -> active souls -> world-agent` 包装流程。
 
-> **Runs locally** (TUI / CLI) — multi-agent is not on hosted play. `neonrp web --project examples/multi-agent/kagura-island`
+## Template Layout
 
-## What makes this multi-agent
-
-`fast` and `orch` modes run a **world-agent + domain agents**; NPCs are data. **multi-agent** adds a `souls/` folder where each soul is an **independent character-agent** with its own mind. Kagura is the showcase: **seven souls** who think, scheme, and remember in parallel, wrapped by the world-agent:
-
-```
-world-agent  →  active souls (this turn's actors)  →  world-agent
-  (sovereign      each soul: speech / action /          (single world-close
-   orchestrator)   inner voice, on its own agenda)        boundary, narrates)
-```
-
-`playthrough.json` declares which souls are active each turn. Souls are isolated actors — not a peer mesh, but an **owner-directed actor set** with one world-close boundary. The island remembers; the loop turns; each soul carries its own secrets through it.
-
-```bash
-neonrp web --project examples/multi-agent/kagura-island
+```text
+kagura-island/
+├── runtime_contract.json      # router shell; live soul wrapper still engages
+├── playthrough.json           # copied into <game>/.neonrp/playthrough.json
+├── agents/                    # world-agent + functional sub-agents
+├── game/                      # world truth owned by world-agent
+└── souls/                     # 8 full soul folders (M16 schema)
 ```
 
-## The seven souls
+## Runtime Reading
 
-| Soul | id |
-|---|---|
-| **Kagami** 镜子 | `kagami-si-kagami001` |
-| **Hane** 羽 | `hane-si-hane0001` |
-| **Makoto** 真琴 | `makoto-si-makoto001` |
-| **Miyaji** 宫司 | `miyaji-si-miyaji001` |
-| **Shiro** 白 | `shiro-si-shiro0001` |
-| **Tsubasa** 翼 | `tsubasa-si-tsubasa01` |
-| **Yuto** 悠人 | `yuto-si-yuto0001` |
+- `world-agent` is the sovereign orchestrator.
+- `active_souls` in `playthrough.json` define which soul instances think this turn.
+- Souls are isolated actors. They do not share folders and do not directly own world
+  state.
+- Final player-facing narration still closes through `world-agent`.
 
-Each soul folder follows the bundle shape: `soul.json` / `soul.md` (identity), `persona/` (traits, values, relationships), `background/` (history, origin, secrets), `character/` (profile, stats, inventory), memory (`long-term-memo/` + `short-term-memo/`), `rules/` (per-soul guardrails), `agents/` (the soul's mind), `trajectory/` (lived history).
+This means Kagura is not a peer mesh. It is an owner-directed actor set with a single
+world close boundary.
 
-## World
+## Soul Layout
 
-`agents/` = world-agent + town / combat / story / world-builder / npc-builder / rules-referee. `game/` holds the island truth (lore, locations, items, timeline; GM truth in `game/lore/gm-truth.md` — world-agent only). `runtime_contract.json` keeps the router shell; the live soul wrapper engages because `playthrough.json + souls/` are present.
+Every soul folder follows the committed M16 bundle shape:
 
-> Time loop · sanity · taboo: irreversible consequences, CoC-style. The player is a **human**, never a named soul.
+- `soul.json` — machine identity envelope
+- `soul.md` — prose-facing soul charter for authoring / alignment
+- `persona/*.json` — structured traits, motivations, values, relationships
+- `background/*.md` — history, origin, secrets
+- `character/*.json` — visible profile, stats, inventory, status
+- `rules/*.md` — roleplay guardrails for that soul
+- `short-term-memo/` and `long-term-memo/` — memory stores
+- `trajectory/` — action trail
+- `agents/manifest.json` — internal specialist roster contract
 
-## License
+Current engine path still resolves each soul as one consolidated runtime agent synthesized
+from `agents/manifest.json + persona/`. The six specialist entries remain the soul-internal
+contract, not six always-live runtime peers.
 
-**AGPL-3.0** — fork, mod, ship your own. Engine (`neonrp`) is a proprietary preview.
+## Player Binding
+
+The human player is already fixed at setup through `game/meta/roster.json` and
+`playthrough.json`. In Kagura this is `kakaru` for the committed Dream 1 run.
+The world-agent must not ask the player to choose a character again.
+
+## What This Template Demonstrates
+
+- Soul folders as first-class runtime assets
+- World truth vs soul truth separation
+- Owner-directed orchestration instead of peer democracy
+- Off-stage soul continuity with explicit folder state
+- A concrete `soul.md + persona/*.json` split for roleplay authoring

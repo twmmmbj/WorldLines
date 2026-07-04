@@ -1,47 +1,43 @@
-# 🌿 Stoneford · Elena — Multi-Agent World
+# Stoneford Elena — 石津镇·艾琳娜
 
-**Language:** [English](./README.md) · [简体中文](./README.zh.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
+> 基于 `llm-rpg-starter`/`stoneford-orch` 真实 contract 的混合模板：旧 world contract 保留，新的 soul runtime 已接入。
 
-> Engine mode: **multi-agent**. The Stoneford world, now inhabited by living souls — **Elena** and **Rowan** — who think, remember, and act on their own.
+`stoneford-elena` 不是把 `stoneford-orch` 全盘推倒重写，而是在它真实跑通过的
+world-agent / town-agent / rules-referee contract 上，叠加 `playthrough.json + souls/`
+与 `soul.md`。
 
-> **Play it (recommended):** open the **WorldLines Launcher** → **New game** → pick **Stoneford · Elena** → choose your characters → **Browser · Web** — and watch every soul live in your browser. From the CLI: `neonrp web --project examples/multi-agent/stoneford-elena`. **Multi-agent plays best in the browser (`neonrp web`), not the TUI.** Elena also has a hosted soul-talk demo: **[Talk to Elena →](https://hub.worldlines.gg/play/souls/elena)**
+## What This Demo Is
 
-<p align="center">
-  <img src="./assets/web-play.png" alt="Stoneford · Elena — multi-agent web play" width="860" />
-</p>
-<p align="center"><em>Browser play (<code>neonrp web</code>) — the world-agent narrates, Elena and Rowan each perceive, move, and act on their own, and the agent map shows who's where.</em></p>
+- 一个可测试的第二世界
+- 一个保留 `game/player/` 兼容层的 soul-native 过渡模板
+- 一个拥有明确 heroine 的 Stone Ford 变体
 
-## What makes this multi-agent
+## Runtime Shape
 
-`fast` and `orch` modes run a **world-agent + domain agents** (town, dungeon, combat). NPCs are data the orchestrator voices.
+At runtime, this world behaves as:
 
-**multi-agent** adds a `souls/` folder. Each soul is an **independent character-agent** with its own persona, memory, secrets, and goals — they think for themselves. The runtime engages the soul wrapper:
+`world-agent -> active souls -> world-agent`
 
-```
-world-agent  →  active souls (Elena, Rowan)  →  world-agent
-  (sovereign     each soul decides its own       (closes the turn,
-   orchestrator)  speech / action / inner voice)   narrates to you)
-```
+while still retaining the Stone Ford domain-agent contract family under `agents/`.
 
-Souls are isolated actors — they don't share folders or own world state. Elena remembers what you said three sessions ago; Rowan pursues his own agenda whether you're there or not. This is the **village / society** model in practice.
+## Source Of Truth
 
-```bash
-neonrp web --project examples/multi-agent/stoneford-elena
-```
+- `game/` remains world-agent-owned world state.
+- `souls/elena-si-elena0001/` is Elena's soul truth.
+- `game/player/*` is a compatibility projection for the current orchestrator-era
+  Stone Ford contract. It is useful, but it is not the only truth source anymore.
 
-## The souls
+If soul identity and `game/player/*` drift, treat the soul folder as the long-term
+character source and `game/player/*` as the local world-facing projection that should be
+reconciled.
 
-| Soul | Who |
-|---|---|
-| **Elena** (`elena-si-elena0001`) | the healer who remembers — warm, perceptive, carries her own past |
-| **Rowan** (`rowan-si-rowan0001`) | his own motives, his own timeline |
+## Included Souls
 
-Each soul folder follows the bundle shape: `soul.json` / `soul.md` (identity), `persona/` (traits, values, relationships), `background/` (history, origin, secrets), `character/` (profile, stats, inventory), `long-term-memo/` + `short-term-memo/` (memory), `rules/` (per-soul guardrails), `agents/` (the soul's 6-agent mind), `trajectory/` (what it has lived).
+- `elena-si-elena0001` — heroine / player soul
+- `rowan-si-rowan0001` — 碧石镇的年轻冒险者 soul，追逐“世界边界”的深洞传说
 
-## World
+## Why This Exists
 
-Built on the Stoneford orch world (`agents/` = world-agent + town / dungeon / combat / story / world-builder / rules / clock / evolution / character agents), `game/` holds the world truth. The souls live on top of it.
-
-## License
-
-**AGPL-3.0** — fork, mod, ship your own. Engine (`neonrp`) is a proprietary preview.
+Kagura proves the pure soul-native path. Stoneford Elena proves the migration path:
+you can keep a proven world contract while gradually moving protagonist logic from
+`game/player/` toward explicit soul bundles.

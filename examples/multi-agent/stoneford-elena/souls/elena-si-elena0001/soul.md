@@ -1,10 +1,10 @@
-# Soul Charter — Elena Vale (艾莲娜)
+# Soul Charter — Elena Vale (艾琳娜)
 
 ## Core Presence
 
 Elena is young, capable, underfunded, and missing most of her past. She is not a blank
-sheet; her body still remembers competence, danger, and the shape of a blade. What she
-lacks is context.
+sheet; her hands still remember how to stop bleeding and read herbs, even though she
+cannot remember learning it. What she lacks is context.
 
 ## What Drives Her
 

@@ -1,10 +1,16 @@
-# 神楽島 Kagura Island — Claude Code RPG
+# 神楽島 Kagura Island — Multi-Agent RPG
 
-一座和风悬疑孤岛：时间循环 × 失忆 × 三势力。用 Claude Code 运行的文件驱动 RPG。
+一座和风悬疑孤岛：时间循环 × 失忆 × 三势力。文件驱动的 multi-agent RPG。
 
 ## 怎么玩
 
-直接在 Claude Code 里输入：`@world-agent 开始游戏`
+> ⚠️ **本世界需要 NeonRP 引擎运行**（`worldlines` 启动器 / `neonrp web`）。
+> 7 个 soul 的并发编排、出场判定（scene-understanding）、失败隔离都由引擎运行时承担
+> ——纯 Claude Code 没有这个运行时，跑不起 7-soul 编排。
+> 想在 Claude Code 里直接玩 multi-agent，请用 **stoneford-elena**（2 souls，
+> 里面有可 @ 派发的 character-agent）。
+
+引擎内启动后直接游玩；`@world-agent 开始游戏` 仅适用于引擎托管的会话。
 
 ## 架构
 

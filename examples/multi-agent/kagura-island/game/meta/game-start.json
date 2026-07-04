@@ -5,7 +5,7 @@
   "version": "0.1",
   "wid": "kagura-island",
   "agent_routing": {
-    "entry_agent": "narrator",
+    "entry_agent": "world-agent",
     "router_type": "sticky"
   },
   "setting": {
