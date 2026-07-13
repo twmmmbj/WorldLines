@@ -318,8 +318,8 @@ Full documentation at **[docs.worldlines.gg](https://docs.worldlines.gg)**:
 | **v0.1.9** — Engine (2026-04) | ✓ 10-agent orchestrator · Stoneford starter · Claude Code runtime |
 | **v0.2.0** — Hub Launch (2026-06) | ✓ WebHub · Hosted Play · Soul Talk · Create Studio · Stripe · Covers · Saves |
 | **v0.2.3** — Multi-Agent Village (2026-06) | ✓ The village: a world-agent wrapping independent souls · Kagura Island · Stoneford · Elena · runs locally |
-| **v0.3.0** — Desktop (2026-07) | ◑ Tauri desktop app · Persistent worlds · Alipay/WeChat · Self-hostable web |
-| **v1.0** — Protocol | ○ Stable WORLD/SOUL protocol · Self-hostable web edition |
+| **v0.3.0** — Desktop (2026-07) | ✓ Unified Web/TUI · Web Launcher · White-box world creation · Self-hostable web |
+| **v1.0** — Protocol | ○ Stable WORLD/SOUL protocol · Worlds that keep living |
 
 Full roadmap: [docs.worldlines.gg/docs/roadmap](https://docs.worldlines.gg/docs/roadmap)
 

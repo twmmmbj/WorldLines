@@ -302,8 +302,8 @@ WorldLines 背后的框架 —— **Orchestrated Reality（编排现实）** —
 | **v0.1.9** — 引擎 (2026-04) | ✓ 10-agent 编排器 · Stoneford 起始世界 · Claude Code 运行时 |
 | **v0.2.0** — Hub 上线 (2026-06) | ✓ WebHub · 在线游玩 · Soul Talk · 创作工坊 · Stripe · 封面 · 存档 |
 | **v0.2.3** — 多智能体村庄 (2026-06) | ✓ 村庄:world-agent 包裹独立 souls · Kagura Island · Stoneford · Elena · 本地运行 |
-| **v0.3.0** — 桌面版 (2026-07) | ◑ Tauri 桌面 · 常驻世界 · 支付宝/微信 · 自托管 Web 版 |
-| **v1.0** — 协议 | ○ 稳定 WORLD/SOUL 协议 · 自托管 Web 版 |
+| **v0.3.0** — 桌面版 (2026-07) | ✓ 统一 Web/TUI · Web Launcher · 白模创作流程 · 自托管 Web 版 |
+| **v1.0** — 协议 | ○ 稳定 WORLD/SOUL 协议 · 常驻世界 |
 
 完整路线图：[docs.worldlines.gg/docs/roadmap](https://docs.worldlines.gg/docs/roadmap)
 
