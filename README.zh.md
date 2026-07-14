@@ -71,12 +71,12 @@ WorldLines 就是这种执念的产物。
 
 | 平台 | 文件 | 下载 |
 |------|------|------|
-| macOS (Apple Silicon) | `WorldLines-Desktop-macos-arm64.dmg` | [最新版](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-macos-arm64.dmg) |
+| macOS (Apple Silicon) | `WorldLines-Installer.dmg` | [最新版](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Installer.dmg) |
 | Windows | `WorldLines-Desktop-windows-x64-setup.exe` | [最新版](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-windows-x64-setup.exe) |
 
-应用尚未签名。macOS 会报「已损坏」——拖进「应用程序」后，在终端执行一次
-`xattr -cr /Applications/WorldLines.app` 即可正常打开。
-Windows：SmartScreen → 更多信息 → 仍要运行。Linux 请用下方终端安装。
+macOS：右键安装器 → 打开 → 打开——它会自动下载并安装桌面版，之后直接
+双击 WorldLines 即可。Windows：SmartScreen → 更多信息 → 仍要运行。
+Linux 请用下方终端安装。
 
 ### ⌨️ 或通过终端安装
 
