@@ -75,9 +75,10 @@ the full local web product. No terminal needed.
 | macOS (Apple Silicon) | `WorldLines-Desktop-macos-arm64.dmg` | [latest](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-macos-arm64.dmg) |
 | Windows | `WorldLines-Desktop-windows-x64-setup.exe` | [latest](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-windows-x64-setup.exe) |
 
-The app isn't signed yet, so the **first run only** needs one approval —
-macOS: right-click → Open → Open; Windows: SmartScreen → More info → Run
-anyway. Linux uses the terminal install below.
+The app isn't signed yet. macOS flags it as “damaged” — after copying to
+Applications, run `xattr -cr /Applications/WorldLines.app` once in Terminal.
+Windows: SmartScreen → More info → Run anyway. Linux uses the terminal
+install below.
 
 ### ⌨️ Or install via terminal
 
