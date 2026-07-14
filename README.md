@@ -65,17 +65,19 @@ We built a harness that connects world-agents, place-agents, and soul-agents int
 
 ## Quick Start
 
-### 🖥️ Download the launcher
+### 🖥️ Download the desktop app
 
-Pick your platform. Double-click to install. No terminal needed.
+Double-click to install — it bootstraps the engine on first launch and opens
+the full local web product. No terminal needed.
 
 | Platform | File | Download |
 |----------|------|----------|
-| macOS | `WorldLines.command` | [latest](https://worldlines.gg/WorldLines.command) |
-| Windows | `WorldLines.bat` | [latest](https://worldlines.gg/WorldLines.bat) |
-| Linux | `WorldLines.sh` | [latest](https://worldlines.gg/WorldLines.sh) |
+| macOS (Apple Silicon) | `WorldLines-Desktop-macos-arm64.dmg` | [latest](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-macos-arm64.dmg) |
+| Windows | `WorldLines-Desktop-windows-x64-setup.exe` | [latest](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-windows-x64-setup.exe) |
 
-macOS / Linux: `chmod +x` once, then drag to Desktop.
+The app isn't signed yet, so the **first run only** needs one approval —
+macOS: right-click → Open → Open; Windows: SmartScreen → More info → Run
+anyway. Linux uses the terminal install below.
 
 ### ⌨️ Or install via terminal
 

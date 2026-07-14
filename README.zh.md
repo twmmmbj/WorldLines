@@ -65,17 +65,17 @@ WorldLines 就是这种执念的产物。
 
 ## 快速上手
 
-### 🖥️ 下载启动器
+### 🖥️ 下载桌面应用
 
-下载对应平台的启动器，双击即可安装。无需打开终端。
+双击即可安装——首次启动会自动装好引擎，然后打开完整的本地 Web 产品。无需打开终端。
 
-| 平台    | 文件                  | 下载 |
-|---------|-----------------------|------|
-| macOS   | `WorldLines.command`  | [最新版](https://worldlines.gg/WorldLines.command) |
-| Windows | `WorldLines.bat`      | [最新版](https://worldlines.gg/WorldLines.bat)     |
-| Linux   | `WorldLines.sh`       | [最新版](https://worldlines.gg/WorldLines.sh)      |
+| 平台 | 文件 | 下载 |
+|------|------|------|
+| macOS (Apple Silicon) | `WorldLines-Desktop-macos-arm64.dmg` | [最新版](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-macos-arm64.dmg) |
+| Windows | `WorldLines-Desktop-windows-x64-setup.exe` | [最新版](https://github.com/LudicDynamics/WorldLines/releases/latest/download/WorldLines-Desktop-windows-x64-setup.exe) |
 
-macOS / Linux 上下载后 `chmod +x` 一次，然后拖到桌面即可。
+应用尚未签名，**仅首次打开**需要确认一次——macOS：右键 → 打开 → 打开；
+Windows：SmartScreen → 更多信息 → 仍要运行。Linux 请用下方终端安装。
 
 ### ⌨️ 或通过终端安装
 
