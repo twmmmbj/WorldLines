@@ -337,11 +337,11 @@ Full roadmap: [docs.worldlines.gg/docs/roadmap](https://docs.worldlines.gg/docs/
 ## Star History
 
 <p align="center">
-  <a href="https://www.star-history.com/?type=date&repos=LudicDynamics%2FWorldLines">
+  <a href="https://www.star-history.com/?repos=LudicDynamics%2FWorldLines&type=date&legend=top-left">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&theme=dark&legend=top-left" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left" />
-      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&theme=dark&legend=top-left&sealed_token=hAMeVSBFmQURbsmNitH0zmVUnDRR-pjGYWvAY5ePfXI6TIUqZyEh9-LWx-J_ctUN0i1OSc0zz45GUFWZONb7RRKMwBD2GtS1GVhRUtoEb6FIkQQcsgNhs8jvl8BB9cj_U-0I_gL7qj71WZJUNB5qMCtqATX0mpKgb6HZ-EF9c_g8p_L2NOH4grvfnlCN" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left&sealed_token=hAMeVSBFmQURbsmNitH0zmVUnDRR-pjGYWvAY5ePfXI6TIUqZyEh9-LWx-J_ctUN0i1OSc0zz45GUFWZONb7RRKMwBD2GtS1GVhRUtoEb6FIkQQcsgNhs8jvl8BB9cj_U-0I_gL7qj71WZJUNB5qMCtqATX0mpKgb6HZ-EF9c_g8p_L2NOH4grvfnlCN" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=LudicDynamics/WorldLines&type=date&legend=top-left&sealed_token=hAMeVSBFmQURbsmNitH0zmVUnDRR-pjGYWvAY5ePfXI6TIUqZyEh9-LWx-J_ctUN0i1OSc0zz45GUFWZONb7RRKMwBD2GtS1GVhRUtoEb6FIkQQcsgNhs8jvl8BB9cj_U-0I_gL7qj71WZJUNB5qMCtqATX0mpKgb6HZ-EF9c_g8p_L2NOH4grvfnlCN" />
     </picture>
   </a>
 </p>
